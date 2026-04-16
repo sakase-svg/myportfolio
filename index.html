@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>研修受講生専用ポータル</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@400;500;700&display=swap" rel="stylesheet">
+    <style>
+        body { font-family: 'Noto Sans JP', sans-serif; background-color: #f8fafc; }
+        .card-hover:hover { transform: translateY(-2px); box-shadow: 0 4px 12px -2px rgb(0 0 0 / 0.1); }
+        /* 埋め込み窓をレスポンシブにするためのコンテナ */
+        .iframe-container {
+            position: relative;
+            width: 100%;
+            padding-top: 56.25%; /* 16:9 の比率 */
+            overflow: hidden;
+            border-radius: 0.75rem;
+        }
+        .iframe-container iframe {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            border: 0;
+        }
+        /* カレンダー用の少し縦長なコンテナ */
+        .calendar-container {
+            position: relative;
+            width: 100%;
+            height: 450px;
+            overflow: hidden;
+            border-radius: 0.75rem;
+        }
+        .calendar-container iframe {
+            width: 100%;
+            height: 100%;
+            border: 0;
+        }
+    </style>
+</head>
+<body class="text-slate-800">
+
+    <header class="bg-white border-b border-slate-200 sticky top-0 z-50">
+        <div class="max-w-6xl mx-auto px-4 h-16 flex items-center justify-between">
+            <h1 class="text-lg font-bold text-slate-900 flex items-center">
+                <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6 mr-2 text-blue-600" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 6.253v13m0-13C10.832 5.477 9.246 5 7.5 5S4.168 5.477 3 6.253v13C4.168 18.477 5.754 18 7.5 18s3.332.477 4.5 1.253m0-13C13.168 5.477 14.754 5 16.5 5c1.747 0 3.332.477 4.5 1.253v13C19.832 18.477 18.247 18 16.5 18c-1.746 0-3.332.477-4.5 1.253" />
+                </svg>
+                研修受講生専用ポータル
+            </h1>
+        </div>
+    </header>
+
+    <main class="max-w-6xl mx-auto px-4 py-8">
+        
+        <div class="grid grid-cols-1 lg:grid-cols-3 gap-8">
+            
+            <div class="lg:col-span-2 space-y-8">
+                
+                <section>
+                    <h3 class="text-lg font-bold mb-4 flex items-center">
+                        <span class="w-1.5 h-6 bg-indigo-600 rounded-full mr-2"></span>
+                        今月の研修概要
+                    </h3>
+                    <div class="bg-white p-2 rounded-2xl border border-slate-200 shadow-sm">
+                        <div class="iframe-container">
+                            <iframe src="https://www.canva.com/design/PLAYHOLDER/view?embed" allowfullscreen></iframe>
+                        </div>
+                        <div class="p-3 text-right">
+                            <a href="#" class="text-sm text-indigo-600 hover:underline">全画面で表示する →</a>
+                        </div>
+                    </div>
+                </section>
+
+                <section>
+                    <h3 class="text-lg font-bold mb-4 flex items-center">
+                        <span class="w-1.5 h-6 bg-emerald-600 rounded-full mr-2"></span>
+                        研修スケジュール
+                    </h3>
+                    <div class="bg-white p-2 rounded-2xl border border-slate-200 shadow-sm">
+                        <div class="calendar-container">
+                            <iframe src="https://calendar.google.com/calendar/embed?src=ja.japanese%23holiday%40group.v.calendar.google.com&ctz=Asia%2FTokyo"></iframe>
+                        </div>
+                    </div>
+                </section>
+            </div>
+
+            <div class="space-y-6">
+                <h3 class="text-lg font-bold flex items-center">
+                    <span class="w-1.5 h-6 bg-blue-600 rounded-full mr-2"></span>
+                    クイックアクセス
+                </h3>
+                
+                <div class="grid grid-cols-1 gap-4">
+                    <a href="#" class="bg-white p-4 rounded-xl border border-slate-200 flex items-center card-hover transition-all">
+                        <div class="bg-red-100 p-2 rounded-lg mr-4 text-red-600">
+                            <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M14.752 11.168l-3.197-2.132A1 1 0 0010 9.87v4.263a1 1 0 001.555.832l3.197-2.132a1 1 0 000-1.664z" />
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M21 12a9 9 0 11-18 0 9 9 0 0118 0z" />
+                            </svg>
+                        </div>
+                        <span class="font-bold">録画アーカイブ</span>
+                    </a>
+
+                    <a href="#" class="bg-white p-4 rounded-xl border border-slate-200 flex items-center card-hover transition-all">
+                        <div class="bg-amber-100 p-2 rounded-lg mr-4 text-amber-600">
+                            <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M8.228 9c.549-1.165 2.03-2 3.772-2 2.21 0 4 1.343 4 3 0 1.4-1.278 2.575-3.006 2.907-.542.104-.994.54-.994 1.093m0 3h.01M21 12a9 9 0 11-18 0 9 9 0 0118 0z" />
+                            </svg>
+                        </div>
+                        <span class="font-bold">よくある質問</span>
+                    </a>
+                </div>
+
+                <div class="bg-rose-50 p-6 rounded-2xl border border-rose-100">
+                    <h4 class="font-bold text-rose-900 mb-2">欠席・遅延の連絡</h4>
+                    <p class="text-xs text-rose-700 mb-4">当日朝8:30までに、専用フォームより送信してください。</p>
+                    <a href="#" class="block w-full bg-rose-600 text-white text-center py-3 rounded-xl font-bold hover:bg-rose-500 transition-colors">連絡フォームを開く</a>
+                </div>
+
+                <div class="bg-slate-900 p-6 rounded-2xl text-white">
+                    <h4 class="font-bold mb-2 text-sm">事務局へのお問い合わせ</h4>
+                    <p class="text-xs text-slate-400 mb-4">不明点などはメールにて受け付けています。</p>
+                    <a href="mailto:support@example.com" class="text-blue-400 text-sm font-bold hover:underline">support@example.com</a>
+                </div>
+            </div>
+
+        </div>
+    </main>
+
+    <footer class="py-10 text-center text-slate-400 text-xs">
+        © 2026 研修運営事務局 ポータルサイト
+    </footer>
+
+</body>
+</html>
